@@ -1,0 +1,132 @@
+
+
+.page-header {
+    text-align: center;
+    height: 100%;
+    background-image: linear-gradient( 135deg, #222 10%, #000DFF 100%);
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+}
+
+h2, p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 15px;
+    padding-bottom: 6px;
+}
+
+h5 {
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 10px;
+    margin: 0px;
+}
+
+h6{
+    color: white;
+}
+
+#content {
+    padding-left: 30px;
+}
+
+body{
+    background-image: url("https://lp-cms-production.imgix.net/image_browser/cycling-siena-italy.jpg?auto=format&fit=crop&q=40&sharp=10&vib=20&ixlib=react-8.6.4");
+    background-repeat: repeat;
+    }
+ 
+#sidebar {
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-bottom: 10px;
+    margin-top: 20px;
+    height: -webkit-fill-available;
+    background-image: linear-gradient(270deg, #222 23%, rgb(7, 4, 59) 42%); 
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px 0px rgb(0, 0, 0);
+
+}
+
+#cityInfo {
+    border: 1px solid #e0e0e0;
+    height: 340px;
+    margin: 20px 20px 10px 20px;
+    border-radius: 10px;
+    background-image: linear-gradient(270deg, #222 23%, rgb(7,4,59) 42%); 
+    border-radius: 10px;
+    color:white;
+    box-shadow: 5px 5px 10px 0px rgb(0, 0, 0);
+
+}
+
+#uvDiv {
+    display: none;
+}
+
+#uvIndex {
+    width: 49px;
+    border-radius: 6px;
+    padding-left: 8px;
+}
+.form-control{
+    width: auto;
+}
+#forecast {
+    margin: 0px;
+    color: #ffffff;
+}
+
+#day1, #day2, #day3, #day4, #day5 {
+    margin: 10px 20px 10px 0px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    background-image: linear-gradient( 135deg, #000 10%, #000DFF 100%);
+    height: 215px;
+    float: left;
+    box-shadow: 5px 5px 10px 0px rgb(0, 0, 0);
+}
+
+#cityBtns {
+    margin-top: 20px;
+}
+
+#searchBtn {
+    background-image: linear-gradient( 135deg, #000 10%, #000DFF 100%);
+}
+
+.cityButtons {
+    font-family: "Arial", Helvetica, sans-serif;
+    width: -webkit-fill-available;
+    text-align: left;
+    height: 40px;
+    margin-bottom: 5px;
+    color: #ffffff;
+    border: 1px solid #e0e0e0;
+    background-image: linear-gradient( 135deg, #000 10%, #000DFF 100%);
+}
+
+@media (max-width: 592px) {
+    .page-header {
+        height: 130px;
+    }
+    #sidebar {
+        width: 340px;
+    }
+    .form-control {
+        width: 60%;
+    }
+    .container {
+        width: 80%;
+    }
+    #cityInfo {
+        height: 390px;
+    }
+}

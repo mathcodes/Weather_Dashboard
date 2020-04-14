@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather Dashboard</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="page-header">
+        <h1>Weather Dashboard</h1>
+    </div>
+    <div class="row" id="content">
+        <div class="col-md-3 bg-light" id="sidebar">
+            <h6>Search for a city:</h6>
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" type="text" aria-label="Search" id="search">
+                <button type="button" class="btn btn-primary" id="searchBtn"><i class="fas fa-search"></i></button>
+            </form>
+            <div id="cityBtns"></div>
+        </div>
+        <div class="col-md-9">
+            <div class="row">
+                <div class="container" id="cityInfo">
+                    <h3 id="todaysDate"></h3>
+                    <div class="row container">
+                        <h2 id="cityName"></h2>
+                        <img id="icon">
+                    </div>
+                    <p id="temp"></p>
+                    <p id="humidity"></p>
+                    <p id="windSpeed"></p>
+                    <div class="row container" id="uvDiv">
+                        <p>UV Index: </p>
+                        <p id="uvIndex" style="margin-left: 7px;"></p>
+                    </div>
+                </div>
+
+            </div>
+            <!-- 5-DAY FORECAST -->
+            <div class="row container" id="forecast">
+                <div class="col-md" id="day1">
+                    <h5 id="d1d"></h5>
+                    <div class="row container">
+                        <img id="d1i">
+                    </div>
+                    <p id="d1t"></p>
+                    <p id="d1h"></p>
+                </div>
+                <div class="col-md" id="day2">
+                    <h5 id="d2d"></h5>
+                    <div class="row container">
+                        <img id="d2i">
+                    </div>
+                    <p id="d2t"></p>
+                    <p id="d2h"></p>
+
+                </div>
+                <div class="col-md" id="day3">
+                    <h5 id="d3d"></h5>
+                    <div class="row container">
+                        <img id="d3i">
+                    </div>
+                    <p id="d3t"></p>
+                    <p id="d3h"></p>
+
+                </div>
+                <div class="col-md" id="day4">
+                    <h5 id="d4d"></h5>
+                    <div class="row container">
+                        <img id="d4i">
+                    </div>
+                    <p id="d4t"></p>
+                    <p id="d4h"></p>
+
+                </div>
+                <div class="col-md" id="day5">
+                    <h5 id="d5d"></h5>
+                    <div class="row container">
+                        <img id="d5i">
+                    </div>
+                    <p id="d5t"></p>
+                    <p id="d5h"></p>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
