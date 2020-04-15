@@ -31,30 +31,48 @@ $(document).ready(function () {
 
     }
 
-
-    // give search button a click function to:
+    $("#search").keyup(function(){
+        if (event.key === "Enter"){
+            console.log("enter")
+            getUserInput();
+        }
+    })
+    // give search buttona click function to:
     $("#searchBtn").on("click", function () {
 
-        var searchInput = $("#search").val();
-        var newBtn = $(`<button type="button" class="btn btn-primary cityButtons" id=${searchInput}></button>`);
-
-        newBtn.text(searchInput);
-        newBtn.appendTo(cityBtns);
-
-        console.log(searchInput);
-
-        var cities = [];
-        var oldCities = JSON.parse(localStorage.getItem("Cities"));
-
-        console.log(cities);
-
-        cities.push(searchInput);
-        localStorage.setItem("Cities", JSON.stringify([...oldCities, ...cities]));
-
-        city = $("#search").val();
-        generateInfo();
+        getUserInput();
 
     });
+
+    function getUserInput(){
+        city = $("#search").val().trim() ;
+        console.log(city);
+        $("#search").val(""); //clear input field
+        if (city === ""){ //if empty don't run
+            return;
+        }
+        var oldCities = JSON.parse(localStorage.getItem("Cities"));
+        if(oldCities.indexOf(city) === -1){
+            var newBtn = $(`<button type="button" class="btn btn-primary cityButtons" id=${city}></button>`);
+
+            newBtn.text(city);
+            newBtn.appendTo(cityBtns);
+    
+            console.log(city);
+    
+            var cities = [];
+    
+            console.log(cities);
+    
+            cities.push(city);
+            localStorage.setItem("Cities", JSON.stringify([...oldCities, ...cities]));
+        } 
+            
+        
+
+        // city = $("#search").val();
+        generateInfo();
+    }
 
     $(document).on("click", ".cityButtons", function (e) {
         city = $(this).text();
