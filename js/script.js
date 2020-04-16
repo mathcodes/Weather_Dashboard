@@ -7,7 +7,7 @@ $(document).ready(function () {
             }
         }
     );
-    document.getElementById("content").style.backgroundImage = "url('...\Weather_Dashboard\Milky-Way-Rising-Over-Glen-Haven-01.jpg')";
+    document.getElementById("content").style.backgroundImage = "url('../BGland.jpg')";
     const m = moment();
     console.log(moment());
     console.log(m.format('l'));
@@ -37,7 +37,7 @@ $(document).ready(function () {
             getUserInput();
         }
     })
-    // give search buttona click function to:
+    // give search buttons click function to:
     $("#searchBtn").on("click", function () {
 
         getUserInput();
@@ -82,9 +82,6 @@ $(document).ready(function () {
 
     function generateInfo() {
         var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIKey;
-        // forecast sample api URL https://api.openweathermap.org/data/2.5/forecast/daily?id=524901&appid=b1b15e88fa797225412429c1c50c122a1
-        // current weather api URL https://api.openweathermap.org/data/2.5/weather?q=denver&appid=0abab7784e1c82cec0681f8c35a2f302
-
         $.ajax({
             url: queryURL,
             method: "GET"
