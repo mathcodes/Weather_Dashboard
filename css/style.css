@@ -41,7 +41,10 @@ body{
     background-image: url("../BGland.jpg");
     background-repeat: repeat;
     }
- 
+ .forecast{
+     
+    height: -webkit-fill-available;
+ }
 #sidebar {
     padding-top: 15px;
     padding-left: 15px;
