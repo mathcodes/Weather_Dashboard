@@ -69,6 +69,11 @@ $(document).ready(function () {
         } 
             
         
+
+        // city = $("#search").val();
+        generateInfo();
+    }
+
     $(document).on("click", ".cityButtons", function (e) {
         city = $(this).text();
         generateInfo();
@@ -119,8 +124,6 @@ $(document).ready(function () {
                     $('#uvIndex').css("color", "#ffffff");
                 }
             });
-           
-
 
             var forecastURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + response.name + "&appid=" + APIKey;
             $.ajax({
