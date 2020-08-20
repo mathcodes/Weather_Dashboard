@@ -69,9 +69,8 @@ $(document).ready(function () {
         } 
             
         
-
-        // city = $("#search").val();
-        generateInfo();
+city = $("#search").val();
+         generateInfo();
     }
 
     $(document).on("click", ".cityButtons", function (e) {
@@ -125,12 +124,6 @@ $(document).ready(function () {
                 }
             });
            
-var weatherMap = "http://maps.openweathermap.org/maps/2.0/weather/PA0/{z}/{x}/{y}?date=5F3E85BA&opacity=0.9&fill_bound=true&appid=APIKey"
-$.ajax({
-                url: weatherMap,
-                method: "GET"
-            }).then(function (response) {
-                console.log(response);
 
 
             var forecastURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + response.name + "&appid=" + APIKey;
