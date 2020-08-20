@@ -69,10 +69,6 @@ $(document).ready(function () {
         } 
             
         
-city = $("#search").val();
-         generateInfo();
-    }
-
     $(document).on("click", ".cityButtons", function (e) {
         city = $(this).text();
         generateInfo();
